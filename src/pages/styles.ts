@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../device";
 
 export const CityContainer = styled.div`
   display: flex;
@@ -7,6 +8,11 @@ export const CityContainer = styled.div`
   img {
     width: 10rem;
     height: 10rem;
+
+    @media ${device.tabletS} {
+      width: 15rem;
+      height: 15rem;
+    }
   }
 `;
 

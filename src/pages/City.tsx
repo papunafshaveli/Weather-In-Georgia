@@ -63,9 +63,9 @@ const City: React.FC<CityPropTypes> = ({ themes, setThemes }) => {
       <CityNameContainer themes={themes}>
         <p>{weatherData?.location.name}</p>
         {themes ? (
-          <MdDarkMode onClick={handleClick} />
+          <MdDarkMode size={32} onClick={handleClick} />
         ) : (
-          <HiLightBulb onClick={handleClick} />
+          <HiLightBulb size={32} onClick={handleClick} />
         )}
       </CityNameContainer>
       <CityContainer>
