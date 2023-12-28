@@ -12,7 +12,8 @@ export const HeaderContainer = styled.div`
   width: 100%;
   min-height: 100px;
 
-  background-image: url("/header-wallpaper.jpg");
+  background-image: url("/background-day.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1rem;
@@ -29,7 +30,7 @@ export const HeaderContainer = styled.div`
 export const StyledNavLink = styled(NavLink)`
   font-weight: 700;
 
-  color: white;
+  color: black;
 
   text-decoration: none;
 
