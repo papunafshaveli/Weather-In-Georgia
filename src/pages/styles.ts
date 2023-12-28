@@ -20,11 +20,12 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const CityNameContainer = styled.div`
+export const CityNameContainer = styled.div<{ themes: boolean }>`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   padding: 0.5rem 1rem;
-  background-color: aqua;
+  background-color: ${({ themes }) =>
+    themes ? " hsla(9, 100%, 64%, 0.2)" : " hsl(0, 0%, 47%)"};
 `;

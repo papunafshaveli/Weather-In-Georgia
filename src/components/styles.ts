@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div<{ themes: boolean }>`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -12,7 +12,8 @@ export const HeaderContainer = styled.div`
   width: 100%;
   min-height: 100px;
 
-  background-image: url("/background-day.jpg");
+  background-image: ${({ themes }) =>
+    themes ? `url("/background-day.jpg")` : `url("/background-dark.jpg")`};
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,10 +28,10 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledNavLink = styled(NavLink)<{ themes: boolean }>`
   font-weight: 700;
 
-  color: black;
+  color: ${({ themes }) => (themes ? "black" : "white")};
 
   text-decoration: none;
 

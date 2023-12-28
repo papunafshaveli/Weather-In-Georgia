@@ -60,7 +60,7 @@ const City: React.FC<CityPropTypes> = ({ themes, setThemes }) => {
 
   return (
     <>
-      <CityNameContainer>
+      <CityNameContainer themes={themes}>
         <p>{weatherData?.location.name}</p>
         {themes ? (
           <MdDarkMode onClick={handleClick} />

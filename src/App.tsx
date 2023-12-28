@@ -11,7 +11,7 @@ function App() {
   const [themes, setThemes] = useState<boolean>(true);
   return (
     <AppContainer themes={themes}>
-      <Header />
+      <Header themes={themes} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -28,7 +28,5 @@ export default App;
 const AppContainer = styled.div<{ themes: boolean }>`
   min-height: 100vh;
   background-color: ${({ themes }) =>
-    themes
-      ? " hsl(236, 33%, 92%);"
-      : " hsl(232.94117647058823, 12.408759124087588%, 26.862745098039216%)"};
+    themes ? " hsla(9, 100%, 64%, 0.4)" : " hsl(0, 0%, 71%)"};
 `;
