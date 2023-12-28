@@ -70,28 +70,28 @@ const City: React.FC<CityPropTypes> = ({ themes, setThemes }) => {
       </CityNameContainer>
       <CityContainer>
         <div>
-          <Wrapper>
+          <Wrapper themes={themes}>
             <FcOvertime />
             <p>{weatherData?.location.localtime}</p>
           </Wrapper>
-          <Wrapper>
+          <Wrapper themes={themes}>
             <LiaTemperatureHighSolid />
             <p> Temp: {weatherData?.current.temp_c} °C</p>
           </Wrapper>
-          <Wrapper>
+          <Wrapper themes={themes}>
             <FaTemperatureHigh />{" "}
             <p> Feelslike: {weatherData?.current.feelslike_c} °C</p>
           </Wrapper>
 
-          <Wrapper>
+          <Wrapper themes={themes}>
             <FaWind />
             <p>Wind Degree: {weatherData?.current.wind_degree}</p>
           </Wrapper>
-          <Wrapper>
+          <Wrapper themes={themes}>
             <GiWindsock />
             <p> Wind Dir: {weatherData?.current.wind_dir}</p>
           </Wrapper>
-          <Wrapper>
+          <Wrapper themes={themes}>
             <GiWindTurbine />
             <p> Wind Kmh: {weatherData?.current.wind_kph}</p>
           </Wrapper>

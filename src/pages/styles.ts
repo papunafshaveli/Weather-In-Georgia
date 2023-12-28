@@ -10,13 +10,14 @@ export const CityContainer = styled.div`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ themes: boolean }>`
   display: flex;
   gap: 1rem;
 
   p {
     font-size: 1rem;
     padding-bottom: 1rem;
+    color: ${({ themes }) => (themes ? "black" : "white")};
   }
 `;
 
@@ -28,4 +29,6 @@ export const CityNameContainer = styled.div<{ themes: boolean }>`
   padding: 0.5rem 1rem;
   background-color: ${({ themes }) =>
     themes ? " hsla(9, 100%, 64%, 0.2)" : " hsl(0, 0%, 47%)"};
+
+  color: ${({ themes }) => (themes ? "black" : "white")};
 `;
